@@ -25,13 +25,12 @@ def cnt():
 
     if args.t and args.d:
         dt_df = df[df['dt'].str.contains(args.d)]
-        top_dt_df = dt_df.head(args.t).to_string(index=False)
+        top_dt_df = dt_df.head(args.t).loc[:, ['cmd','cnt']].to_string(index=False)
         print(top_dt_df)
 
     elif args.t:
-        top_df = df.head(args.t)
-        selected_df = top_df.loc[:, ['cmd','cnt']].to_string(index=False)
-        print(selected_df)
+        top_df = df.head(args.t).loc[:, ['cmd','cnt']].to_string(index=False)
+        print(top_df)
 
     elif args.d:
         date_df = df[df['dt'].str.contains(args.d)]
