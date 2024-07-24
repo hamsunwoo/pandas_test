@@ -30,4 +30,5 @@ def cnt():
 
     elif args.d:
         date_df = df[df['dt'].str.contains(args.d)]
+        selected_date_df = date_df.loc[:, ['cmd','cnt']]
         print(date_df)
