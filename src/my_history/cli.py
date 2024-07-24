@@ -22,12 +22,12 @@ def cnt():
 
     elif args.t:
         top_df = df.head(args.t)
-        selected_df = top_df.loc[:, ['cmd','cnt']]
+        selected_df = top_df.loc[:, ['cmd','cnt']].to_string(index=False)
 
         print(selected_df)
 
     elif args.d:
         date_df = df[df['dt'].str.contains(args.d)]
-        selected_date_df = date_df.loc[:, ['cmd','cnt']]
+        selected_date_df = date_df.loc[:, ['cmd','cnt']].to_string(index=False)
 
         print(selected_date_df)
