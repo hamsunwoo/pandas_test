@@ -5,6 +5,7 @@
 my-history -s {카운트하고싶은 명령어 입력}
 my-history -t {출력될 데이터 길이 입력}
 my-history -d {데이터 날짜입력}
+my-history -t {출력될 데이터 길이 입력} -d {데이터 날짜입력}
 ```
 ## v0.2.0코드
 ```python
@@ -46,7 +47,7 @@ def cnt():
         date_df = df[df['dt'].str.contains(args.d)]
         selected_date_df = date_df.loc[:, ['cmd','cnt']].to_string(index=False)
         print(selected_date_df)
-``
+```
 
 
 ## 코드
