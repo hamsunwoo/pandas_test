@@ -11,7 +11,7 @@ readme = "README.md"
 license = {text = "MIT"}
 
 [project.scripts]
-c_cnt='my_history.cli:cnt'
+my-history='my_history.cli:cnt'
 
 [tool.pdm]
 distribution = true
